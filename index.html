@@ -637,18 +637,17 @@ function getWikiSlug(mfr, model) {
 async function fetchWikiImageUrl(slug) {
   if (slug in imgCache) return imgCache[slug];
   try {
-    const r = await fetch(
-      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(slug)}`,
-      { headers: { 'Api-User-Agent': 'HeadphoneContaminationDashboard/1.0' } }
-    );
+    // Action API with origin=* — no custom headers means no CORS preflight, works from any browser
+    const apiUrl = 'https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&pithumbsize=500&origin=*&titles=' + encodeURIComponent(slug);
+    const r = await fetch(apiUrl);
     if (!r.ok) { imgCache[slug] = null; return null; }
     const d = await r.json();
-    // Prefer original over thumbnail, but get a decent size
-    const src = d?.originalimage?.source || d?.thumbnail?.source || null;
-    // Bump thumbnail resolution if it's the wiki thumbnail format
-    const url = src ? src.replace(/\/\d+px-/, '/500px-') : null;
-    imgCache[slug] = url;
-    return url;
+    const pages = d?.query?.pages || {};
+    const page = Object.values(pages)[0];
+    if (!page || page.pageid === -1) { imgCache[slug] = null; return null; }
+    const src = page?.thumbnail?.source || null;
+    imgCache[slug] = src;
+    return src;
   } catch {
     imgCache[slug] = null;
     return null;
