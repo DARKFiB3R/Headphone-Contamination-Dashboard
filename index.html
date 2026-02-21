@@ -16,20 +16,21 @@
     --accent:#b8f0a0; --accent2:#4caf6e;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
+  html{overflow-x:hidden;}
   body{background:var(--bg);color:var(--text);font-family:'Lora',Georgia,serif;min-height:100vh;overflow-x:hidden;}
   body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4;}
 
   /* HEADER */
   header{padding:60px 48px 40px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
   header::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green),var(--yellow),var(--red),transparent);opacity:0.4;}
-  .header-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:16px;}
-  h1{font-family:'Syne',sans-serif;font-size:clamp(32px,5vw,72px);font-weight:800;line-height:.95;letter-spacing:-.02em;margin-bottom:16px;}
+  .header-eyebrow{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:16px;}
+  h1{font-family:'Syne',sans-serif;font-size:clamp(28px,4.5vw,54px);font-weight:800;line-height:.97;letter-spacing:-.01em;margin-bottom:16px;}
   h1 span.highlight{color:var(--accent);}
-  .header-meta{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);display:flex;gap:24px;flex-wrap:wrap;margin-top:20px;}
+  .header-meta{font-family:'DM Mono',monospace;font-size:13px;color:var(--muted);display:flex;gap:24px;flex-wrap:wrap;margin-top:20px;}
   .header-meta span{display:flex;align-items:center;gap:6px;}
   .header-meta span::before{content:'◆';font-size:6px;color:var(--accent2);}
   .legend-row{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
-  .legend-item{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);}
+  .legend-item{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);}
   .legend-dot{width:10px;height:10px;border-radius:50%;}
   .legend-dot.green{background:var(--green);}
   .legend-dot.yellow{background:var(--yellow);}
@@ -49,23 +50,23 @@
   .stat-item.s-yellow .stat-num{color:var(--yellow);}
   .stat-item.s-red .stat-num{color:var(--red);}
   .stat-item.s-neutral .stat-num{color:var(--text);}
-  .stat-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;}
+  .stat-label{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;}
 
   /* CONTROLS */
-  .controls{padding:20px 48px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:100;}
-  .search-wrap{position:relative;flex:1;min-width:180px;max-width:340px;}
+  .controls{padding:20px 48px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px solid rgba(184,240,160,0.12);border-bottom:1px solid var(--border);background:rgba(20,23,20,0.97);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;}
+  .search-wrap{position:relative;flex:1;min-width:0;max-width:340px;}
   .search-wrap::before{content:'⌕';position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:17px;pointer-events:none;}
-  input[type="text"],select{background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:'DM Mono',monospace;font-size:12px;padding:9px 14px;border-radius:6px;outline:none;transition:border-color .2s;}
+  input[type="text"],select{background:var(--surface2);border:1px solid rgba(184,240,160,0.2);color:var(--text);font-family:'DM Mono',monospace;font-size:13px;padding:11px 14px;border-radius:6px;outline:none;transition:border-color .2s;}
   input[type="text"]:focus,select:focus{border-color:var(--accent2);}
   .search-input{width:100%;padding-left:38px;}
-  select{min-width:150px;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a8a7a' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px;}
-  .filter-btn{background:var(--surface2);border:1px solid var(--border);color:var(--muted);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;padding:9px 12px;border-radius:6px;cursor:pointer;text-transform:uppercase;transition:all .2s;}
+  select{min-width:120px;max-width:100%;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a8a7a' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px;}
+  .filter-btn{background:var(--surface2);border:1px solid rgba(184,240,160,0.15);color:var(--muted);font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;padding:10px 14px;border-radius:6px;cursor:pointer;text-transform:uppercase;transition:all .2s;}
   .filter-btn.f-green.active{border-color:var(--green);color:var(--green);background:var(--green-dim);}
   .filter-btn.f-yellow.active{border-color:var(--yellow);color:var(--yellow);background:var(--yellow-dim);}
   .filter-btn.f-red.active{border-color:var(--red);color:var(--red);background:var(--red-dim);}
-  .results-count{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-left:auto;}
+  .results-count{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);margin-left:auto;}
   .view-toggle{display:flex;gap:3px;background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:3px;}
-  .view-btn{background:none;border:none;color:var(--muted);font-size:14px;padding:5px 9px;border-radius:4px;cursor:pointer;transition:all .2s;}
+  .view-btn{background:none;border:none;color:var(--muted);font-size:16px;padding:5px 9px;border-radius:4px;cursor:pointer;transition:all .2s;}
   .view-btn.active{background:var(--border);color:var(--text);}
 
   /* GRID */
@@ -73,9 +74,9 @@
   .manufacturer-section{margin-bottom:44px;opacity:0;transform:translateY(20px);animation:fadeUp .4s ease forwards;}
   @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
   .mfr-header{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
-  .mfr-name{font-family:'Syne',sans-serif;font-size:21px;font-weight:700;}
-  .mfr-count{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);}
-  .mfr-score-badge{margin-left:auto;font-family:'DM Mono',monospace;font-size:10px;padding:4px 12px;border-radius:20px;border:1px solid;letter-spacing:.1em;}
+  .mfr-name{font-family:'Syne',sans-serif;font-size:21px;font-weight:700;word-break:break-word;}
+  .mfr-count{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);}
+  .mfr-score-badge{margin-left:auto;font-family:'DM Mono',monospace;font-size:11px;padding:5px 14px;border-radius:20px;border:1px solid;letter-spacing:.08em;}
   .mfr-score-badge.grade-A{color:var(--green);border-color:var(--green);background:var(--green-dim);}
   .mfr-score-badge.grade-B{color:var(--yellow);border-color:var(--yellow);background:var(--yellow-dim);}
   .mfr-score-badge.grade-C{color:var(--red);border-color:var(--red);background:var(--red-dim);}
@@ -100,19 +101,19 @@
 
   /* CARD BODY */
   .card-body{padding:13px 15px 15px;flex:1;display:flex;flex-direction:column;gap:9px;}
-  .card-type-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;}
-  .card-model{font-family:'Syne',sans-serif;font-size:14px;font-weight:600;line-height:1.3;flex:1;}
+  .card-type-badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;}
+  .card-model{font-family:'Syne',sans-serif;font-size:15px;font-weight:600;line-height:1.3;flex:1;word-break:break-word;}
   .ratings-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:auto;}
   .rating-cell{background:var(--surface2);border-radius:6px;padding:8px 4px;text-align:center;border:1px solid var(--border);}
   .rating-cell.r-green{background:var(--green-dim);border-color:rgba(76,175,110,.3);}
   .rating-cell.r-yellow{background:var(--yellow-dim);border-color:rgba(240,180,41,.3);}
   .rating-cell.r-red{background:var(--red-dim);border-color:rgba(232,80,80,.3);}
-  .rating-icon{font-size:14px;display:block;margin-bottom:3px;font-weight:700;}
+  .rating-icon{font-size:15px;display:block;margin-bottom:3px;font-weight:700;}
   .r-green .rating-icon{color:var(--green);}
   .r-yellow .rating-icon{color:var(--yellow);}
   .r-red .rating-icon{color:var(--red);}
-  .rating-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.07em;color:var(--muted);text-transform:uppercase;display:block;}
-  .card-tap-hint{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);text-align:right;margin-top:4px;opacity:0;transition:opacity .2s;}
+  .rating-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;display:block;}
+  .card-tap-hint{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-align:right;margin-top:4px;opacity:0;transition:opacity .2s;}
   .product-card:hover .card-tap-hint{opacity:1;}
 
   /* LIST VIEW */
@@ -141,7 +142,7 @@
   .modal-img-section:hover img.loaded{transform:scale(1.04);}
   .modal-img-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:0;transition:opacity .4s;}
   .modal-img-placeholder.hidden{opacity:0;pointer-events:none;}
-  .zoom-hint{position:absolute;bottom:10px;right:12px;font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.1em;opacity:0;transition:opacity .2s;pointer-events:none;z-index:2;}
+  .zoom-hint{position:absolute;bottom:10px;right:12px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;opacity:0;transition:opacity .2s;pointer-events:none;z-index:2;}
   .modal-img-section:hover .zoom-hint{opacity:1;}
   .no-img-hint{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;opacity:.5;}
 
@@ -150,15 +151,15 @@
   .lightbox.visible{opacity:1;pointer-events:all;}
   .lightbox img{max-width:90vw;max-height:88vh;object-fit:contain;border-radius:4px;box-shadow:0 20px 80px rgba(0,0,0,.8);transform:scale(.95);transition:transform .25s;}
   .lightbox.visible img{transform:scale(1);}
-  .lightbox-caption{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.1em;white-space:nowrap;}
+  .lightbox-caption{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-family:'DM Mono',monospace;font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.08em;white-space:nowrap;}
   .lightbox-close{position:absolute;top:18px;right:20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:10;}
   .lightbox-close:hover{background:rgba(255,255,255,.2);color:#fff;}
 
   /* MODAL BODY */
   .modal-header{padding:22px 26px 16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:14px;}
-  .modal-manufacturer{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin-bottom:4px;}
+  .modal-manufacturer{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;}
   .modal-title{font-family:'Syne',sans-serif;font-size:19px;font-weight:700;line-height:1.2;}
-  .modal-type{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-top:3px;}
+  .modal-type{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);margin-top:3px;}
   .modal-close{background:var(--surface2);border:1px solid var(--border);color:var(--muted);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;}
   .modal-close:hover{border-color:var(--red);color:var(--red);}
   .modal-body{padding:20px 26px 26px;}
@@ -172,31 +173,57 @@
   .green .modal-rating-verdict{color:var(--green);}
   .yellow .modal-rating-verdict{color:var(--yellow);}
   .red .modal-rating-verdict{color:var(--red);}
-  .modal-rating-sublabel{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;display:block;}
-  .modal-section-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:9px;margin-top:18px;}
+  .modal-rating-sublabel{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.07em;text-transform:uppercase;display:block;}
+  .modal-section-title{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-bottom:9px;margin-top:18px;}
   .what-tested{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;}
-  .test-chip{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 9px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-align:center;}
+  .test-chip{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);text-align:center;}
   .test-chip.tested{color:var(--text);border-color:rgba(184,240,160,.2);background:rgba(76,175,110,.05);}
-  .insight-box{background:var(--surface2);border:1px solid var(--border);border-left:3px solid;border-radius:0 8px 8px 0;padding:13px 16px;margin-top:10px;font-family:'Lora',serif;font-size:13px;line-height:1.65;color:var(--muted);font-style:italic;}
+  .insight-box{background:var(--surface2);border:1px solid var(--border);border-left:3px solid;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:10px;font-family:'Lora',serif;font-size:14px;line-height:1.7;color:var(--muted);font-style:italic;}
   .insight-box.green{border-left-color:var(--green);}
   .insight-box.yellow{border-left-color:var(--yellow);}
   .insight-box.red{border-left-color:var(--red);}
-  .chem-tag{background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:3px 11px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);}
+  .chem-tag{background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);}
 
   .empty-state{text-align:center;padding:80px 40px;color:var(--muted);font-family:'DM Mono',monospace;font-size:13px;}
   .empty-state .big-icon{font-size:48px;display:block;margin-bottom:16px;opacity:.3;}
 
+  /* ABOUT SECTION */
+  .about-section{padding:44px 48px 36px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(76,175,110,0.035) 0%,transparent 100%);}
+  .about-top{margin-bottom:28px;}
+  .about-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.22em;color:var(--accent2);text-transform:uppercase;margin-bottom:12px;}
+  .about-title{font-family:'Lora',serif;font-size:18px;font-weight:400;font-style:italic;color:var(--text);line-height:1.55;margin-bottom:16px;max-width:840px;}
+  .about-meta-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .about-pdf-link{display:inline-flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:12px;color:var(--accent2);text-decoration:none;border:1px solid rgba(76,175,110,0.35);border-radius:6px;padding:6px 14px;transition:all .2s;letter-spacing:.04em;}
+  .about-pdf-link:hover{background:rgba(76,175,110,0.1);border-color:var(--accent2);}
+  .about-separator{color:var(--border);font-family:'DM Mono',monospace;}
+  .about-pub-info{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.04em;}
+
+  .takeaways-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;}
+  .takeaway-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px 20px;position:relative;overflow:hidden;transition:border-color .2s,background .2s;}
+  .takeaway-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgba(184,240,160,0.4),transparent);}
+  .takeaway-card:hover{border-color:rgba(184,240,160,0.2);background:var(--surface2);}
+  .takeaway-num{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:rgba(184,240,160,0.15);line-height:1;margin-bottom:10px;letter-spacing:-.02em;}
+  .takeaway-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:10px;line-height:1.3;}
+  .takeaway-body{font-family:'Lora',serif;font-size:13px;line-height:1.7;color:var(--muted);}
+
+  .authors-row{display:flex;align-items:baseline;gap:16px;padding-top:20px;border-top:1px solid var(--border);flex-wrap:wrap;}
+  .authors-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--accent2);text-transform:uppercase;flex-shrink:0;}
+  .authors-list{font-family:'Lora',serif;font-size:13px;color:var(--muted);line-height:1.7;font-style:italic;flex:1;min-width:0;}
+
+  
+  
+
   /* FOOTER */
   footer{border-top:1px solid var(--border);margin-top:16px;padding:20px 48px;}
   .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-  .footer-left{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.05em;line-height:1.6;}
+  .footer-left{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.04em;line-height:1.6;}
   .footer-left a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);transition:color .2s,border-color .2s;}
   .footer-left a:hover{color:var(--accent);border-color:var(--accent2);}
-  .footer-right a{display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;text-decoration:none;text-transform:uppercase;transition:color .2s;}
+  .footer-right a{display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;text-decoration:none;text-transform:uppercase;transition:color .2s;}
   .footer-right a:hover{color:var(--text);}
   .footer-right svg{opacity:.5;transition:opacity .2s;}
   .footer-right a:hover svg{opacity:1;}
-  @media(max-width:768px){footer{padding-left:16px;padding-right:16px;}}
+  
 
   ::-webkit-scrollbar{width:6px;}
   ::-webkit-scrollbar-track{background:var(--bg);}
@@ -238,16 +265,42 @@
     flex-wrap: wrap;
   }
 
+  
+  
+  @media(max-width:1100px){
+    .takeaways-grid{grid-template-columns:repeat(2,1fr);}
+  }
   @media(max-width:768px){
-    header,.controls,.grid-wrap{padding-left:16px;padding-right:16px;}
+    header,.about-section,.controls,.grid-wrap{padding-left:16px;padding-right:16px;}
+    header{padding-top:36px;padding-bottom:28px;}
+    h1{font-size:28px;}
+    .header-meta{font-size:11px;gap:12px;}
     .stat-strip{grid-template-columns:repeat(2,1fr);}
+    .stat-num{font-size:30px;}
     .products-row{grid-template-columns:1fr 1fr;}
-    h1{font-size:30px;}
+    .controls{padding:12px 16px;gap:8px;}
+    .search-wrap{min-width:0;max-width:100%;flex:1 1 100%;}
+    .results-count{margin-left:0;}
+    footer{padding-left:16px;padding-right:16px;}
+  }
+  @media(max-width:520px){
+    .takeaways-grid{grid-template-columns:1fr;}
+    .about-section{padding:24px 16px 20px;}
+    .about-title{font-size:15px;}
+    .products-row{grid-template-columns:1fr;}
+    .controls{flex-wrap:wrap;}
+    select{min-width:0;flex:1 1 calc(50% - 4px);}
+    .filter-btn{flex:1 1 calc(33% - 8px);text-align:center;}
+    #sortSelect{flex:1 1 100%;}
+    .view-toggle{margin-left:auto;}
+    .stat-strip{grid-template-columns:repeat(2,1fr);}
+    .stat-num{font-size:26px;}
   }
   @media(max-width:480px){
-    .products-row{grid-template-columns:1fr;}
     .modal-ratings{grid-template-columns:1fr;}
     .what-tested{grid-template-columns:1fr 1fr;}
+    .modal{border-radius:12px;}
+    body.list-view .card-img-wrap{width:76px;}
   }
 </style>
 </head>
@@ -270,6 +323,52 @@
     </div>
   </div>
 </header>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+  <div class="about-top">
+    <div class="about-title-block">
+      <div class="about-eyebrow">About This Study</div>
+      <h2 class="about-title">A Comprehensive Analysis of Endocrine Disruptors and Hazardous Additives in a Sample of 180 Headphones/Earphones</h2>
+      <div class="about-meta-row">
+        <a class="about-pdf-link" href="https://arnika.org/en/publications/the-sound-of-contamination" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          Download full report (PDF)
+        </a>
+        <span class="about-separator">·</span>
+        <span class="about-pub-info">ToxFree Life for All · Arnika, TVE, dTest, VKI, ZPS · February 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaways-grid">
+    <div class="takeaway-card">
+      <div class="takeaway-num">01</div>
+      <div class="takeaway-title">100% Market Contamination</div>
+      <div class="takeaway-body">Hazardous substances were detected in every product tested. While individual doses may be low, the "cocktail effect" of daily, multi-source exposure poses severe long-term risks to endocrine health and fertility.</div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">02</div>
+      <div class="takeaway-title">The Bisphenol Crisis</div>
+      <div class="takeaway-body">BPA and its substitutes — the most documented endocrine disruptors — were nearly universal, found in 177 of 180 samples. Their high concentrations highlight a critical failure to curb toxins affecting the human hormonal system in consumer structural plastics.</div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">03</div>
+      <div class="takeaway-title">A Market-Wide Failure</div>
+      <div class="takeaway-body">Premium brands offer no guarantee of safety. Toxic substances, including unregulated flame retardants, are pervasive across the entire market — proving that price is not a proxy for chemical safety.</div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">04</div>
+      <div class="takeaway-title">The "Toxic Legacy"</div>
+      <div class="takeaway-body">Current regulatory gaps allow dangerous additives to poison the secondary raw material market, making safe recycling impossible and undermining EU Circular Economy objectives. We urge EU policymakers to abandon the substance-by-substance approach and implement comprehensive bans on chemical classes to prevent regrettable substitution — ensuring safety is a market standard, not a consumer burden.</div>
+    </div>
+  </div>
+
+  <div class="authors-row">
+    <span class="authors-label">Authors</span>
+    <span class="authors-list">Karolina Brabcova · Birgit Schiller · Eva Tobolkova · Emese Gulyas · Olivia Saenz · Jitka Strakova · Nikola Jelinek · Jindrich Petrlik · Barbora Skorepova</span>
+  </div>
+</section>
 
 <div class="stat-strip">
   <div class="stat-item s-green"><div class="stat-num">42%</div><div class="stat-label">Products rated green overall</div></div>
@@ -299,6 +398,13 @@
     <button class="view-btn active" id="viewGrid" onclick="setView('grid')" title="Grid">⊞</button>
     <button class="view-btn" id="viewList" onclick="setView('list')" title="List">☰</button>
   </div>
+  <select id="sortSelect" onchange="render()">
+    <option value="alpha">A → Z</option>
+    <option value="alpha-desc">Z → A</option>
+    <option value="best">Best first</option>
+    <option value="worst">Worst first</option>
+    <option value="count">Most products</option>
+  </select>
   <div class="results-count" id="resultsCount">Loading…</div>
 </div>
 
@@ -460,51 +566,68 @@ const products = [
 // ============================================================
 const wikiMap = [
   // [mfr, model-contains, wikipedia-slug]
-  ["Apple",    "AirPods Max",      "AirPods_Max"],
-  ["Apple",    "AirPods Pro",      "AirPods_Pro"],
-  ["Sony",     "WH-1000XM5",       "Sony_WH-1000XM5"],
-  ["Sony",     "WH-CH720",         "Sony_WH-CH720N"],
-  ["Sony",     "WF-1000XM5",       "Sony_WF-1000XM5"],
-  ["Sony",     "LinkBuds",         "Sony_LinkBuds"],
-  ["Sony",     "WF-C510",          "Sony_WF-C500"],
-  ["Sony",     "Ult Wear",         "Sony_WH-1000XM5"],
-  ["JBL",      "Tune 720",         "JBL_Tune_720BT"],
-  ["JBL",      "Tour Pro 3",       "JBL_Tour_Pro_2"],
-  ["JBL",      "Wave Beam",        "JBL_Tune_Beam"],
-  ["JBL",      "JR310",            "JBL_JR310BT"],
-  ["Samsung",  "Galaxy Buds",      "Samsung_Galaxy_Buds3"],
-  ["Sennheiser","Momentum",        "Sennheiser_Momentum_4_Wireless"],
-  ["Sennheiser","Accentum True",   "Sennheiser_ACCENTUM"],
-  ["Sennheiser","Accentum W",      "Sennheiser_ACCENTUM"],
-  ["Jabra",    "Elite 10",         "Jabra_Elite_10"],
+  // Apple
+  ["Apple",    "AirPods Max",        "AirPods_Max"],
+  ["Apple",    "AirPods Pro",        "AirPods_Pro"],
+  // Sony
+  ["Sony",     "WH-1000XM5",         "Sony_WH-1000XM5"],
+  ["Sony",     "WH-CH720",           "Sony_WH-CH720N"],
+  ["Sony",     "WF-1000XM5",         "Sony_WF-1000XM5"],
+  ["Sony",     "LinkBuds",           "Sony_LinkBuds"],
+  ["Sony",     "WF-C510",            "Sony_WF-C500"],
+  ["Sony",     "Ult Wear",           "Sony_WH-1000XM5"],
+  // JBL
+  ["JBL",      "Tune 720",           "JBL_Tune_720BT"],
+  ["JBL",      "Tour Pro 3",         "JBL_Tour_Pro_2"],
+  ["JBL",      "Wave Beam",          "JBL_Tune_Beam"],
+  ["JBL",      "JR310",              "JBL"],
+  // Samsung
+  ["Samsung",  "Galaxy Buds",        "Samsung_Galaxy_Buds3"],
+  // Sennheiser
+  ["Sennheiser","Momentum",          "Sennheiser_Momentum_4_Wireless"],
+  ["Sennheiser","Accentum True",     "Sennheiser_ACCENTUM"],
+  ["Sennheiser","Accentum W",        "Sennheiser_ACCENTUM"],
+  // Jabra
+  ["Jabra",    "Elite 10",           "Jabra_Elite_10"],
+  // Bose
   ["Bose",     "QuietComfort Headphones", "Bose_QuietComfort_45"],
-  ["Bose",     "QuietComfort Ultra","Bose_QuietComfort_Earbuds_II"],
-  ["Beats",    "Solo 4",           "Beats_Solo_4"],
-  ["Beats",    "Solo Buds",        "Beats_Studio_Buds"],
-  ["Marshall", "Major V",          "Marshall_Major_IV"],
-  ["Marshall", "Motif",            "Marshall_Motif_II_ANC"],
-  ["Xiaomi",   "Redmi Buds",       "Xiaomi_Redmi_Buds_5_Pro"],
-  ["Huawei",   "FreeBuds",         "Huawei_FreeBuds_Pro_3"],
-  ["Panasonic","RB-HX220",         "Panasonic_RB-HX220B"],
-  ["Logitech", "G733",             "Logitech_G733"],
-  ["SteelSeries","Arctis Nova",    "SteelSeries_Arctis_Nova_Pro"],
-  ["Razer",    "Kraken",           "Razer_Kraken_(headset)"],
-  ["HyperX",   "Cloud III",        "HyperX_Cloud_III"],
-  ["Corsair",  "HS80",             "Corsair_HS80"],
-  ["Skullcandy","Grom",            "Skullcandy"],
-  ["Philips",  "SHD8850",          "Philips_SHD8850"],
-  ["Jlab",     "JBuds Lux",        "JLab_Audio"],
-  ["Jlab",     "JBuddies",         "JLab_Audio"],
-  ["Niceboy",  "Hive Prodigy",     "Niceboy_(brand)"],
+  ["Bose",     "QuietComfort Ultra", "Bose_QuietComfort_Earbuds_II"],
+  // Beats
+  ["Beats",    "Solo 4",             "Beats_Solo_4"],
+  ["Beats",    "Solo Buds",          "Beats_Studio_Buds"],
+  // Marshall
+  ["Marshall", "Major V",            "Marshall_Major_IV"],
+  ["Marshall", "Motif",              "Marshall_Motif_II_ANC"],
+  // Xiaomi
+  ["Xiaomi",   "Redmi Buds",         "Xiaomi"],
+  // Huawei
+  ["Huawei",   "FreeBuds",           "Huawei_FreeBuds_Pro_3"],
+  // Panasonic
+  ["Panasonic","RB-HX220",           "Panasonic"],
+  // Gaming
+  ["Logitech", "G733",               "Logitech_G733"],
+  ["SteelSeries","Arctis Nova",      "SteelSeries_Arctis_Nova_Pro"],
+  ["Razer",    "Kraken",             "Razer_Kraken_(headset)"],
+  ["HyperX",   "Cloud III",          "HyperX_Cloud_III"],
+  ["Corsair",  "HS80",               "Corsair_HS80"],
+  // Others
+  ["Skullcandy","",                  "Skullcandy"],
+  ["Niceboy",  "",                   "Niceboy_(brand)"],
+  ["Jlab",     "",                   "JLab_Audio"],
 ];
 
 const imgCache = {};
 
 function getWikiSlug(mfr, model) {
+  // Try specific model matches first (non-empty fragments)
   for (const [m, frag, slug] of wikiMap) {
-    if (m === mfr && model.includes(frag)) return slug;
+    if (frag && m === mfr && model.includes(frag)) return slug;
   }
-  // brand-only fallback
+  // Brand-only fallback (empty fragment entries)
+  for (const [m, frag, slug] of wikiMap) {
+    if (!frag && m === mfr) return slug;
+  }
+  // Generic brand match from any entry
   for (const [m, , slug] of wikiMap) {
     if (m === mfr) return slug;
   }
@@ -635,7 +758,16 @@ function render() {
 
   const byMfr = {};
   filtered.forEach(p => { if(!byMfr[p.mfr])byMfr[p.mfr]=[]; byMfr[p.mfr].push(p); });
-  const mfrs = Object.keys(byMfr).sort((a,b) => byMfr[b].length-byMfr[a].length||a.localeCompare(b));
+  const sortVal = document.getElementById('sortSelect').value;
+  const mfrs = Object.keys(byMfr).sort((a,b) => {
+    if (sortVal === 'alpha')       return a.localeCompare(b);
+    if (sortVal === 'alpha-desc')  return b.localeCompare(a);
+    if (sortVal === 'count')       return byMfr[b].length - byMfr[a].length || a.localeCompare(b);
+    const avgScore = mfr => byMfr[mfr].reduce((s,p)=>s+scoreP(p),0)/byMfr[mfr].length;
+    if (sortVal === 'best')        return avgScore(b) - avgScore(a) || a.localeCompare(b);
+    if (sortVal === 'worst')       return avgScore(a) - avgScore(b) || a.localeCompare(b);
+    return a.localeCompare(b);
+  });
 
   renderOrder = [];
   let cid = 0;
