@@ -54,7 +54,7 @@
 
   /* CONTROLS */
   .controls{padding:20px 48px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px solid rgba(184,240,160,0.12);border-bottom:1px solid var(--border);background:rgba(20,23,20,0.97);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;}
-  .search-wrap{position:relative;flex:1;min-width:0;max-width:340px;}
+  .search-wrap{position:relative;flex:1;min-width:0;max-width:340px;} .search-wrap input{padding-left:32px;}
   .search-wrap::before{content:'⌕';position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:17px;pointer-events:none;}
   input[type="text"],select{background:var(--surface2);border:1px solid rgba(184,240,160,0.2);color:var(--text);font-family:'DM Mono',monospace;font-size:13px;padding:11px 14px;border-radius:6px;outline:none;transition:border-color .2s;}
   input[type="text"]:focus,select:focus{border-color:var(--accent2);}
