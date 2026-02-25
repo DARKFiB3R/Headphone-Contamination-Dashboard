@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Sound of Contamination — Headphone Chemical Safety Report</title>
+<title>The Sound of Contamination â Headphone Chemical Safety Report</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <style>
@@ -28,7 +28,7 @@
   h1 span.highlight{color:var(--accent);}
   .header-meta{font-family:'DM Mono',monospace;font-size:13px;color:var(--muted);display:flex;gap:24px;flex-wrap:wrap;margin-top:20px;}
   .header-meta span{display:flex;align-items:center;gap:6px;}
-  .header-meta span::before{content:'◆';font-size:6px;color:var(--accent2);}
+  .header-meta span::before{content:'â';font-size:6px;color:var(--accent2);}
   .legend-row{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
   .legend-item{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);}
   .legend-dot{width:10px;height:10px;border-radius:50%;}
@@ -55,7 +55,7 @@
   /* CONTROLS */
   .controls{padding:20px 48px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px solid rgba(184,240,160,0.12);border-bottom:1px solid var(--border);background:rgba(20,23,20,0.97);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;}
   .search-wrap{position:relative;flex:1;min-width:0;max-width:340px;}
-  .search-wrap::before{content:'⌕';position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:17px;pointer-events:none;}
+  .search-wrap::before{content:'â';position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:17px;pointer-events:none;}
   input[type="text"],select{background:var(--surface2);border:1px solid rgba(184,240,160,0.2);color:var(--text);font-family:'DM Mono',monospace;font-size:13px;padding:11px 14px;border-radius:6px;outline:none;transition:border-color .2s;}
   input[type="text"]:focus,select:focus{border-color:var(--accent2);}
   .search-input{width:100%;padding-left:38px;}
@@ -302,12 +302,26 @@
     .modal{border-radius:12px;}
     body.list-view .card-img-wrap{width:76px;}
   }
-</style>
+
+    .visitor-counter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--green);
+      border-radius: 6px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: rgba(76,175,110,0.04);
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <div class="header-eyebrow">ToxFree Life for All · February 2026 · Arnika / TVE / dTest / VKI / ZPS</div>
+  <div class="header-eyebrow">ToxFree Life for All Â· February 2026 Â· Arnika / TVE / dTest / VKI / ZPS</div>
   <h1>The Sound of<br><span class="highlight">Contamination</span></h1>
   <div class="header-meta">
     <span>81 headphone models tested</span>
@@ -321,6 +335,20 @@
       <div class="legend-item"><div class="legend-dot yellow"></div>Legally compliant, concern exists</div>
       <div class="legend-item"><div class="legend-dot red"></div>Exceeds limits / multiple hazardous substances</div>
     </div>
+    <div class="visitor-counter" id="visit-stats"></div>
+    <script>
+      var _gcvt = setInterval(function() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+          clearInterval(_gcvt);
+          window.goatcounter.visit_count({
+            append: '#visit-stats',
+            path: 'TOTAL',
+            no_branding: true,
+            style: 'div { border:none; background:none; padding:0; margin:0; font-size:0.78rem; color:var(--muted); } #gcvc-views { color:var(--green); font-weight:600; }'
+          });
+        }
+      }, 100);
+    </script>
   </div>
 </header>
 
@@ -333,10 +361,10 @@
       <div class="about-meta-row">
         <a class="about-pdf-link" href="https://arnika.org/en/publications/the-sound-of-contamination" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          Original publication &amp; full report (PDF) →
+          Original publication &amp; full report (PDF) â
         </a>
-        <span class="about-separator">·</span>
-        <span class="about-pub-info">ToxFree Life for All · Arnika, TVE, dTest, VKI, ZPS · February 2026</span>
+        <span class="about-separator">Â·</span>
+        <span class="about-pub-info">ToxFree Life for All Â· Arnika, TVE, dTest, VKI, ZPS Â· February 2026</span>
       </div>
     </div>
   </div>
@@ -350,23 +378,23 @@
     <div class="takeaway-card">
       <div class="takeaway-num">02</div>
       <div class="takeaway-title">The Bisphenol Crisis</div>
-      <div class="takeaway-body">BPA and its substitutes — the most documented endocrine disruptors — were nearly universal, found in 177 of 180 samples. Their high concentrations highlight a critical failure to curb toxins affecting the human hormonal system in consumer structural plastics.</div>
+      <div class="takeaway-body">BPA and its substitutes â the most documented endocrine disruptors â were nearly universal, found in 177 of 180 samples. Their high concentrations highlight a critical failure to curb toxins affecting the human hormonal system in consumer structural plastics.</div>
     </div>
     <div class="takeaway-card">
       <div class="takeaway-num">03</div>
       <div class="takeaway-title">A Market-Wide Failure</div>
-      <div class="takeaway-body">Premium brands offer no guarantee of safety. Toxic substances, including unregulated flame retardants, are pervasive across the entire market — proving that price is not a proxy for chemical safety.</div>
+      <div class="takeaway-body">Premium brands offer no guarantee of safety. Toxic substances, including unregulated flame retardants, are pervasive across the entire market â proving that price is not a proxy for chemical safety.</div>
     </div>
     <div class="takeaway-card">
       <div class="takeaway-num">04</div>
       <div class="takeaway-title">The "Toxic Legacy"</div>
-      <div class="takeaway-body">Current regulatory gaps allow dangerous additives to poison the secondary raw material market, making safe recycling impossible and undermining EU Circular Economy objectives. We urge EU policymakers to abandon the substance-by-substance approach and implement comprehensive bans on chemical classes to prevent regrettable substitution — ensuring safety is a market standard, not a consumer burden.</div>
+      <div class="takeaway-body">Current regulatory gaps allow dangerous additives to poison the secondary raw material market, making safe recycling impossible and undermining EU Circular Economy objectives. We urge EU policymakers to abandon the substance-by-substance approach and implement comprehensive bans on chemical classes to prevent regrettable substitution â ensuring safety is a market standard, not a consumer burden.</div>
     </div>
   </div>
 
   <div class="authors-row">
     <span class="authors-label">Authors</span>
-    <span class="authors-list">Karolina Brabcova · Birgit Schiller · Eva Tobolkova · Emese Gulyas · Olivia Saenz · Jitka Strakova · Nikola Jelinek · Jindrich Petrlik · Barbora Skorepova</span>
+    <span class="authors-list">Karolina Brabcova Â· Birgit Schiller Â· Eva Tobolkova Â· Emese Gulyas Â· Olivia Saenz Â· Jitka Strakova Â· Nikola Jelinek Â· Jindrich Petrlik Â· Barbora Skorepova</span>
   </div>
 </section>
 
@@ -379,7 +407,7 @@
 
 <div class="controls">
   <div class="search-wrap">
-    <input type="text" class="search-input" id="searchInput" placeholder="Search brands or models…">
+    <input type="text" class="search-input" id="searchInput" placeholder="Search brands or modelsâ¦">
   </div>
   <select id="mfrFilter"><option value="">All manufacturers</option></select>
   <select id="typeFilter">
@@ -391,21 +419,21 @@
     <option value="gaming wireless">Gaming wireless</option>
     <option value="gaming with wires">Gaming wired</option>
   </select>
-  <button class="filter-btn f-green" id="filterGreen" onclick="toggleFilter('green')">● Green</button>
-  <button class="filter-btn f-yellow" id="filterYellow" onclick="toggleFilter('yellow')">● Yellow</button>
-  <button class="filter-btn f-red" id="filterRed" onclick="toggleFilter('red')">● Red</button>
+  <button class="filter-btn f-green" id="filterGreen" onclick="toggleFilter('green')">â Green</button>
+  <button class="filter-btn f-yellow" id="filterYellow" onclick="toggleFilter('yellow')">â Yellow</button>
+  <button class="filter-btn f-red" id="filterRed" onclick="toggleFilter('red')">â Red</button>
   <div class="view-toggle">
-    <button class="view-btn active" id="viewGrid" onclick="setView('grid')" title="Grid">⊞</button>
-    <button class="view-btn" id="viewList" onclick="setView('list')" title="List">☰</button>
+    <button class="view-btn active" id="viewGrid" onclick="setView('grid')" title="Grid">â</button>
+    <button class="view-btn" id="viewList" onclick="setView('list')" title="List">â°</button>
   </div>
   <select id="sortSelect" onchange="render()">
-    <option value="alpha">A → Z</option>
-    <option value="alpha-desc">Z → A</option>
+    <option value="alpha">A â Z</option>
+    <option value="alpha-desc">Z â A</option>
     <option value="best">Best first</option>
     <option value="worst">Worst first</option>
     <option value="count">Most products</option>
   </select>
-  <div class="results-count" id="resultsCount">Loading…</div>
+  <div class="results-count" id="resultsCount">Loadingâ¦</div>
 </div>
 
 <div class="grid-wrap" id="mainGrid"></div>
@@ -413,7 +441,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-left">
-      <span>Data source: <a href="https://arnika.org/en/publications/the-sound-of-contamination" target="_blank" rel="noopener">The Sound of Contamination</a> — Brabcova et al., Arnika / ToxFree Life for All, February 2026</span>
+      <span>Data source: <a href="https://arnika.org/en/publications/the-sound-of-contamination" target="_blank" rel="noopener">The Sound of Contamination</a> â Brabcova et al., Arnika / ToxFree Life for All, February 2026</span>
     </div>
     <div class="footer-right">
       <a href="https://pages.github.com" target="_blank" rel="noopener">
@@ -431,7 +459,7 @@
     <div class="modal-img-section" id="modalImgSection" onclick="openLightbox()">
       <div class="modal-img-placeholder" id="modalImgPlaceholder"></div>
       <img id="modalImg" alt="" crossorigin="anonymous">
-      <span class="zoom-hint">↗ CLICK TO ENLARGE</span>
+      <span class="zoom-hint">â CLICK TO ENLARGE</span>
     </div>
     <div class="modal-header">
       <div>
@@ -439,7 +467,7 @@
         <div class="modal-title" id="modalTitle"></div>
         <div class="modal-type" id="modalType"></div>
       </div>
-      <button class="modal-close" onclick="closeModal()">×</button>
+      <button class="modal-close" onclick="closeModal()">Ã</button>
     </div>
     <div class="modal-body">
       <div class="modal-ratings" id="modalRatings"></div>
@@ -452,15 +480,15 @@
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lightbox-close" onclick="closeLightbox()">Ã</button>
   <img id="lightboxImg" alt="">
   <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
 
 <footer class="site-footer">
   <div class="footer-left">
-    <a href="https://arnika.org/en/publications/the-sound-of-contamination" target="_blank" rel="noopener">↗ Full report — Arnika.org</a>
-    <span class="footer-divider">·</span>
+    <a href="https://arnika.org/en/publications/the-sound-of-contamination" target="_blank" rel="noopener">â Full report â Arnika.org</a>
+    <span class="footer-divider">Â·</span>
     <a href="https://tudatosvasarlo.hu/toxfree-life-for-all-english" target="_blank" rel="noopener">ToxFree Life for All project</a>
   </div>
   <div class="footer-right">
@@ -473,14 +501,14 @@
 
 <script>
 // ============================================================
-// COMPLETE DATASET — Annex 1, The Sound of Contamination 2026
+// COMPLETE DATASET â Annex 1, The Sound of Contamination 2026
 // ============================================================
 const products = [
   {mfr:"LifeBee",model:"Digital Pro 40",type:"in-ear wireless",skin:"green",noskin:"yellow",overall:"green"},
   {mfr:"Picun",model:"B8 Wireless Over Ear Headphones",type:"over ear adult",skin:"green",noskin:"green",overall:"green"},
   {mfr:"Enjoy Music",model:"M6pop Cat Ear",type:"over ear child",skin:"yellow",noskin:"red",overall:"red"},
-  {mfr:"JMMO",model:"Kabellose Ohrhörer 5.3 Auto-Pairing 14h",type:"in-ear wireless",skin:"green",noskin:"none",overall:"green"},
-  {mfr:"Dong Quan Shunxin Electronic",model:"Kinder Kabel Kopfhörer Einhorn Dekor",type:"over ear child",skin:"green",noskin:"yellow",overall:"green"},
+  {mfr:"JMMO",model:"Kabellose OhrhÃ¶rer 5.3 Auto-Pairing 14h",type:"in-ear wireless",skin:"green",noskin:"none",overall:"green"},
+  {mfr:"Dong Quan Shunxin Electronic",model:"Kinder Kabel KopfhÃ¶rer Einhorn Dekor",type:"over ear child",skin:"green",noskin:"yellow",overall:"green"},
   {mfr:"Dongguan Yuanze Acoustics",model:"KZ EDX Pro In Ear Monitor Wired IEM",type:"in-ear with wires",skin:"green",noskin:"yellow",overall:"green"},
   {mfr:"Shenzhen Weiqi Technology",model:"Cool Black In-Ear Headphones Type-C",type:"in-ear with wires",skin:"yellow",noskin:"yellow",overall:"yellow"},
   {mfr:"Niceboy",model:"Hive Prodigy 4",type:"over ear adult",skin:"green",noskin:"red",overall:"red"},
@@ -548,7 +576,7 @@ const products = [
   {mfr:"Smyths Toys",model:"Marvel Spider-Man Kids Bluetooth",type:"over ear child",skin:"green",noskin:"green",overall:"green"},
   {mfr:"Claire's",model:"Earbuds & Winder Caticorn",type:"in-ear with wires",skin:"green",noskin:"green",overall:"green"},
   {mfr:"Action / OTL Technologies",model:"Super Mario Earphones Zip Case",type:"in-ear with wires",skin:"red",noskin:"yellow",overall:"red"},
-  {mfr:"Action / OTL Technologies",model:"Pokémon Kids Headphones",type:"over ear child",skin:"green",noskin:"green",overall:"green"},
+  {mfr:"Action / OTL Technologies",model:"PokÃ©mon Kids Headphones",type:"over ear child",skin:"green",noskin:"green",overall:"green"},
   {mfr:"Stealth",model:"C6 100 Light Up Gaming Headset",type:"gaming with wires",skin:"yellow",noskin:"green",overall:"yellow"},
   {mfr:"Kodak",model:"Wireless Headphones Max 400+",type:"over ear adult",skin:"yellow",noskin:"green",overall:"yellow"},
   {mfr:"Kekz",model:"Blue Headphones for Audio-Chips",type:"over ear child",skin:"green",noskin:"yellow",overall:"green"},
@@ -561,8 +589,8 @@ const products = [
 
 // ============================================================
 // IMAGE SYSTEM
-// Wikipedia REST API — fully CORS-enabled in browsers
-// Maps brand+model fragment → Wikipedia article slug
+// Wikipedia REST API â fully CORS-enabled in browsers
+// Maps brand+model fragment â Wikipedia article slug
 // ============================================================
 const wikiMap = [
   // [mfr, model-contains, wikipedia-slug]
@@ -637,7 +665,7 @@ function getWikiSlug(mfr, model) {
 async function fetchWikiImageUrl(slug) {
   if (slug in imgCache) return imgCache[slug];
   try {
-    // Action API with origin=* — no custom headers means no CORS preflight, works from any browser
+    // Action API with origin=* â no custom headers means no CORS preflight, works from any browser
     const apiUrl = 'https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&pithumbsize=500&origin=*&titles=' + encodeURIComponent(slug);
     console.log('[IMG] fetching:', apiUrl);
     const r = await fetch(apiUrl);
@@ -731,7 +759,7 @@ function setView(v) {
 // RENDER
 // ============================================================
 const rC = r => r && r!=='none' ? 'r-'+r : 'r-green';
-const rI = r => ({green:'✓',yellow:'!',red:'✕'}[r]||'—');
+const rI = r => ({green:'â',yellow:'!',red:'â'}[r]||'â');
 const scoreP = p => ({green:2,yellow:1,red:0,none:2}[p.skin]||0) + ({green:2,yellow:1,red:0,none:2}[p.noskin]||0) + ({green:2,yellow:1,red:0,none:2}[p.overall]||0);
 const gClass = a => a>=1.5?'grade-A':a>=0.8?'grade-B':'grade-C';
 const gLabel = a => a>=1.5?'LOW RISK':a>=0.8?'MODERATE':'HIGH RISK';
@@ -754,7 +782,7 @@ function render() {
   document.getElementById('resultsCount').textContent = `${filtered.length} product${filtered.length!==1?'s':''}`;
 
   if (!filtered.length) {
-    grid.innerHTML = `<div class="empty-state"><span class="big-icon">🎧</span>No products match your filters.</div>`;
+    grid.innerHTML = `<div class="empty-state"><span class="big-icon">ð§</span>No products match your filters.</div>`;
     return;
   }
 
@@ -783,7 +811,7 @@ function render() {
       renderOrder.push({p, id});
       const pi = products.indexOf(p);
       const nsCls = p.noskin==='none' ? 'r-green' : rC(p.noskin);
-      const nsIco = p.noskin==='none' ? '—' : rI(p.noskin);
+      const nsIco = p.noskin==='none' ? 'â' : rI(p.noskin);
       return `<div class="product-card overall-${p.overall}" onclick="openModal(${pi})">
         <div class="card-img-wrap" id="ciw-${id}">
           <div class="card-img-placeholder" id="cph-${id}"></div>
@@ -797,7 +825,7 @@ function render() {
             <div class="rating-cell ${nsCls}"><span class="rating-icon">${nsIco}</span><span class="rating-label">Non-contact</span></div>
             <div class="rating-cell ${rC(p.overall)}"><span class="rating-icon">${rI(p.overall)}</span><span class="rating-label">Overall</span></div>
           </div>
-          <div class="card-tap-hint">↗ CLICK FOR DETAILS</div>
+          <div class="card-tap-hint">â CLICK FOR DETAILS</div>
         </div>
       </div>`;
     }).join('');
@@ -863,7 +891,7 @@ function openModal(idx) {
   loadImageInto(mImg, mPh, p.mfr, p.model, p.type);
 
   // Ratings
-  const E = {green:'🟢',yellow:'🟡',red:'🔴',none:'○'};
+  const E = {green:'ð¢',yellow:'ð¡',red:'ð´',none:'â'};
   const V = {green:'PASS',yellow:'CAUTION',red:'FAIL',none:'N/A'};
   const ratings = [
     {val:p.skin,  label:'Skin Contact', sub:'Ear cushions / tips'},
@@ -873,7 +901,7 @@ function openModal(idx) {
   document.getElementById('modalRatings').innerHTML = ratings.map(r => {
     const cls = (!r.val||r.val==='none') ? 'green' : r.val;
     return `<div class="modal-rating-card ${cls}">
-      <span class="modal-rating-emoji">${E[r.val]||'○'}</span>
+      <span class="modal-rating-emoji">${E[r.val]||'â'}</span>
       <span class="modal-rating-verdict">${V[r.val]||'N/A'}</span>
       <span class="modal-rating-sublabel">${r.label}</span>
       <span class="modal-rating-sublabel" style="margin-top:2px;font-size:9px;">${r.sub}</span>
@@ -915,7 +943,7 @@ function openLightbox() {
   document.getElementById('lightboxImg').src = mImg.src;
   document.getElementById('lightboxImg').alt = mImg.alt;
   document.getElementById('lightboxCaption').textContent =
-    currentProduct ? `${currentProduct.mfr} — ${currentProduct.model}` : '';
+    currentProduct ? `${currentProduct.mfr} â ${currentProduct.model}` : '';
   lb.classList.add('visible');
   document.body.style.overflow = 'hidden';
 }
@@ -951,15 +979,15 @@ function typeComponents(type) {
 function buildInsight(p) {
   let t = '';
   if (p.overall==='green') {
-    t = 'This product meets the most protective chemical safety standards across all evaluated categories. While trace hazardous substances were still detected — as in 100% of tested products — concentrations remain below even the strictest voluntary thresholds such as OEKO-TEX® 100 and ecolabel limits.';
+    t = 'This product meets the most protective chemical safety standards across all evaluated categories. While trace hazardous substances were still detected â as in 100% of tested products â concentrations remain below even the strictest voluntary thresholds such as OEKO-TEXÂ® 100 and ecolabel limits.';
   } else if (p.overall==='yellow') {
-    t = 'This product is legally compliant but exceeds stricter voluntary limits such as OEKO-TEX® 100 or ecolabel thresholds. This typically reflects moderate levels of chlorinated paraffins, phthalates, or bisphenols — not an immediate acute risk, but concerning given the daily chronic exposure associated with regular headphone use.';
+    t = 'This product is legally compliant but exceeds stricter voluntary limits such as OEKO-TEXÂ® 100 or ecolabel thresholds. This typically reflects moderate levels of chlorinated paraffins, phthalates, or bisphenols â not an immediate acute risk, but concerning given the daily chronic exposure associated with regular headphone use.';
   } else if (p.skin==='red' && p.noskin==='red') {
-    t = 'Hazardous substance concentrations exceeded legal limits in both the skin-contact and structural components — the most serious rating in this study. This indicates systemic chemical safety failures across the entire product, posing risk both through direct dermal uptake and as a "toxic legacy" barrier to safe recycling.';
+    t = 'Hazardous substance concentrations exceeded legal limits in both the skin-contact and structural components â the most serious rating in this study. This indicates systemic chemical safety failures across the entire product, posing risk both through direct dermal uptake and as a "toxic legacy" barrier to safe recycling.';
   } else if (p.skin==='red') {
     t = 'Concerning chemical concentrations were found specifically in the components making direct skin contact (ear cushions or tips). This is the highest-risk exposure pathway, as dermal absorption occurs directly. The structural hard plastic components performed better by comparison.';
   } else {
-    t = 'While the skin-contact soft plastic parts performed adequately, the hard plastic structural components exceeded acceptable limits. This likely reflects high organophosphate flame retardant (OPFR) concentrations — such as TPhP or RDP — or elevated bisphenol levels in the rigid housing. These create what the report calls a "toxic legacy" that prevents safe recycling.';
+    t = 'While the skin-contact soft plastic parts performed adequately, the hard plastic structural components exceeded acceptable limits. This likely reflects high organophosphate flame retardant (OPFR) concentrations â such as TPhP or RDP â or elevated bisphenol levels in the rigid housing. These create what the report calls a "toxic legacy" that prevents safe recycling.';
   }
   if (p.type.includes('gaming')) t += ' Gaming headsets showed higher contamination on average in this study, a concern given the extended daily sessions typical of gaming.';
   if (p.type.includes('child')) t += ' Children\'s products generally fared better across the study, though any exceedance is especially concerning given children\'s heightened vulnerability to endocrine-disrupting chemicals during developmental windows.';
